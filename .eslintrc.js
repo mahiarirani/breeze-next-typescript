@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    parser: '@babel/eslint-parser',
+    parser: '@typescript-eslint/parser',
     settings: {
         react: {
             version: 'detect',
@@ -15,6 +15,7 @@ module.exports = {
     extends: [
         'eslint:recommended',
         'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
     ],
     parserOptions: {
@@ -24,10 +25,15 @@ module.exports = {
         ecmaVersion: 2020,
         requireConfigFile: false,
         babelOptions: {
-            presets: ['@babel/preset-react'],
+            presets: ['@babel/preset-react', '@babel/preset-typescript'],
         },
     },
-    plugins: ['react', '@next/eslint-plugin-next', 'prettier'],
+    plugins: [
+        'react',
+        '@next/eslint-plugin-next',
+        'prettier',
+        '@typescript-eslint',
+    ],
     rules: {
         'import/prefer-default-export': 0,
         'no-console': 'warn',
@@ -36,7 +42,7 @@ module.exports = {
         'no-unused-expressions': ['error', { allowTernary: true }],
         camelcase: 0,
         'react/self-closing-comp': 1,
-        'react/jsx-filename-extension': [1, { extensions: ['.js', 'jsx'] }],
+        'react/jsx-filename-extension': [1, { extensions: ['.js', 'jsx', '.ts', '.tsx'] }],
         'react/prop-types': 0,
         'react/destructuring-assignment': 0,
         'react/jsx-no-comment-textnodes': 0,
