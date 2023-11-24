@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repository is an implementation of the [Laravel Breeze](https://laravel.com/docs/starter-kits) application / authentication starter kit frontend in [Next.js](https://nextjs.org). All of the authentication boilerplate is already written for you - powered by [Laravel Sanctum](https://laravel.com/docs/sanctum), allowing you to quickly begin pairing your beautiful Next.js frontend with a powerful Laravel backend.
+This repository is an implementation of the [Laravel Breeze](https://laravel.com/docs/starter-kits) application / authentication starter kit frontend in [Next.js](https://nextjs.org) with support for TypeScript. All of the authentication boilerplate is already written for you - powered by [Laravel Sanctum](https://laravel.com/docs/sanctum), allowing you to quickly begin pairing your beautiful Next.js frontend with a powerful Laravel backend.
 
 ## Official Documentation
 
@@ -33,8 +33,19 @@ After defining the appropriate environment variables, you may serve the Laravel 
 # Serve the application...
 php artisan serve
 ```
+Next, clone this repository and install its dependencies with `yarn install` or `npm install`. 
 
-Next, clone this repository and install its dependencies with `yarn install` or `npm install`. Then, copy the `.env.example` file to `.env.local` and supply the URL of your backend:
+```bash
+git clone https://github.com/laravel/breeze-next.git
+
+cd breeze-next
+
+# Install Dependencies
+npm install
+# or
+yarn install 
+```
+Then, copy the `.env.example` file to `.env.local` and supply the URL of your backend:
 
 ```
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
