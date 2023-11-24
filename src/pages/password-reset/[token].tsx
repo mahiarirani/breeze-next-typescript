@@ -35,7 +35,7 @@ const PasswordReset = () => {
     }
 
     useEffect(() => {
-        setEmail(router.query.email || '')
+        setEmail((router.query.email as string) || '')
     }, [router.query.email])
 
     return (
